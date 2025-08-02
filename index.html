@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .floating-contact-btn {
+        .floating-top-btn {
             position: fixed;
             bottom: 30px;
             right: 30px;
@@ -16,7 +16,7 @@
             width: 60px;
             height: 60px;
             border-radius: 50%;
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -24,9 +24,12 @@
             transition: all 0.3s ease;
             z-index: 100;
         }
-        .floating-contact-btn:hover {
+        .floating-top-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        .floating-top-btn.visible {
+            display: flex;
         }
         .gradient-bg {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -117,7 +120,7 @@
                         </div>
                         <div>
                             <p class="text-gray-800 font-medium">Strategic Banking Expansion (JPMorgan EDGE Project)</p>
-                            <p class="text-gray-600">Led a team to envision future banking sinarios, combining sinario planning and perdictive modeling</p>
+                            <p class="text-gray-600">Led a team to envision future banking scenarios, combining scenario planning and predictive modeling</p>
                         </div>
                         <div>
                             <p class="text-gray-800 font-medium">AI Automation for Document Processing</p>
@@ -152,7 +155,7 @@
                                 <span class="skill-pill bg-gray-100 px-3 py-1 rounded-full text-sm">Zapier</span>
                                 <span class="skill-pill bg-gray-100 px-3 py-1 rounded-full text-sm">n8n</span>
                                 <span class="skill-pill bg-gray-100 px-3 py-1 rounded-full text-sm">Pinecone</span>
-                                <span class="skill-pill bg-gray-100 px-3 py-1 rounded-full text-sm">Prompt Enginnering</span>
+                                <span class="skill-pill bg-gray-100 px-3 py-1 rounded-full text-sm">Prompt Engineering</span>
                             </div>
                         </div>
                         
@@ -224,18 +227,34 @@
         </footer>
     </div>
 
+    <a href="#top" class="floating-top-btn" aria-label="Back to top" title="Back to Top">
+        <i class="fas fa-arrow-up text-2xl"></i>
+    </a>
+
     <script>
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Handle floating contact button click
-        document.querySelector('.floating-contact-btn').addEventListener('click', function() {
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Handle scroll to top button
+            const topBtn = document.querySelector('.floating-top-btn');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    topBtn.classList.add('visible');
+                } else {
+                    topBtn.classList.remove('visible');
+                }
+            });
+            
+            topBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
-    
-    <a class="floating-contact-btn" title="Contact Me">
-        <i class="fas fa-envelope text-2xl"></i>
-    </a>
 </body>
 </html>
