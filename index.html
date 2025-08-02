@@ -7,6 +7,27 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        .floating-contact-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #3b82f6;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        .floating-contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
         .gradient-bg {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
@@ -146,7 +167,7 @@
             </section>
 
             <!-- Contact -->
-            <section class="p-8">
+            <section id="contact" class="p-8">
                 <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center">
                     <i class="fas fa-envelope mr-3 text-blue-500"></i>Contact Me
                 </h2>
@@ -204,5 +225,9 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    
+    <a href="#contact" class="floating-contact-btn" title="Contact Me">
+        <i class="fas fa-envelope text-2xl"></i>
+    </a>
 </body>
 </html>

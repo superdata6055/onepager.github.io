@@ -1,34 +1,37 @@
-# superdata6055.github.io
-When you don’t wanna pull out your full résumé 📄 on your phone 📱, a 1-page personal site is the move! 🔗 It’s got your bio, projects, resume, and all your links (LinkedIn, GitHub, email) in one clean spot. Like a smart digital biz card 💼—makes life hella easy 😎🌐.
+# 👨‍💻 Anirudh Rajeev – One-Page Personal Site
 
-# 🔟 Steps to Make a 🔥 1-Page Personal Site That Slaps
+Hey there! 👋  
+This is the code behind my **one-page personal website** – a sleek digital business card for when pulling out a PDF resume on your phone just ain’t it 😅  
+It’s optimized for quick sharing, smooth scrolling, and max 📱 wow-factor.
 
-1. 🧠 **Plan Your Content**  
-   Think like a boss—what do you want the world to know? Bio, skills, projects, contact—keep it tight.
+---
 
-2. 🏗️ **Build the Skeleton**  
-   Start with HTML basics—use `<header>`, `<main>`, `<section>`, `<footer>` like you're constructing your digital home.
+## 🚀 Features
 
-3. 🎨 **Style It Up**  
-   Use [Tailwind CSS](https://tailwindcss.com/) to go from “meh” to “damn” in minutes. Toss in your own flair if you’re feeling spicy.
+✨ All killer, no filler:
 
-4. ✨ **Add Icons**  
-   [Font Awesome](https://fontawesome.com/) is your emoji plug—perfect for ✉️ email, 💼 work, 💻 coding, and 💪 flexing skills.
+- 🧠 **About Me:** Short + sweet intro (who I am, what I do, why I’m cool)
+- 📜 **Credentials:** Degrees, certs, and standout projects (the receipts!)
+- 🛠️ **Tech Skills:** Languages, tools, and AI goodies I use to solve stuff
+- 📲 **Contact Me:** Phone, email, LinkedIn, portfolio – one tap away
+- 🎯 **Sticky CTA Button:** Because clicking around is too much work
+- 📱 **Mobile-Friendly:** Looks fire on phones, tablets, toasters
+- 🎨 **Slick Design:** Powered by [Tailwind CSS](https://tailwindcss.com/) + [Font Awesome](https://fontawesome.com/)
 
-5. 🧱 **Structure Like a Pro**  
-   Break it down—intro, education, certs, projects, skills, and contacts. No clutter, just class.
+---
 
-6. 📱 **Make It Responsive**  
-   Grid it, flex it, mobile-optimize it. Your site should shine on a fridge screen or a flip phone.
+## 🧰 Tech Stack
 
-7. ⚙️ **Spice It Up with JS**  
-   Add little things like updating the year or toggling dark mode—just enough to say, “I code.”
+- 🔧 **HTML5**
+- 🎨 **Tailwind CSS** (via CDN – no build tools, no stress)
+- ⭐ **Font Awesome** (icons for ✨ spice ✨)
+- 🧠 **Vanilla JavaScript** (just enough to auto-update the footer year like a boss)
 
-8. 🧪 **Test + Tweak**  
-   Open it in Chrome, Safari, Edge, and your grandma’s iPad. Make it bulletproof.
+---
 
-9. 🚀 **Ship It**  
-   Deploy with [GitHub Pages](https://pages.github.com/), Netlify, or wherever your web heart desires.
+## 📁 File Structure
 
-10. 📸 **QR Code Vibes**  
-    Generate that scannable magic, slap it on resumes, business cards, laptops—be THAT person.
+```bash
+📦 onepager/
+├── index.html     # Main code – edit me!
+└── README.md      # You’re reading me right now
