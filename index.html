@@ -227,9 +227,14 @@
     <script>
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Handle floating contact button click
+        document.querySelector('.floating-contact-btn').addEventListener('click', function() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
     </script>
     
-    <a href="#contact" class="floating-contact-btn" title="Contact Me">
+    <a class="floating-contact-btn" title="Contact Me">
         <i class="fas fa-envelope text-2xl"></i>
     </a>
 </body>
